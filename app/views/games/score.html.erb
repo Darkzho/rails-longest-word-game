@@ -1,0 +1,15 @@
+<h2 class="title">Resultado</h2>
+
+<div class="block-container">
+  <% if @prueba_1  %>
+    <% if @prueba_2  %>
+      <p><%= @attempt %> Es una palabra en inglés</p>
+    <% else %>
+      <p><%= @attempt %> No es una palabra en inglés</p>
+    <% end %>
+  <% else %>
+    <p> No se puede construir la palabra <%= @attempt %> con <%= @letters %> </p>
+  <% end %>
+
+  <%= link_to "Juega de nuevo", new_path, class:"button-score" %> 
+</div>
